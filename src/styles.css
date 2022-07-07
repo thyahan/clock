@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+}
+
+:root {
+  --clock-body-width: 500px;
+  --clock-body-height: 500px;
+}
+
+.clock-body {
+  position: relative;
+  width: var(--clock-body-width);
+  height: var(--clock-body-height);
+  background-color: white;
+  border: 10px solid black;
+  border-radius: 50%;
+}
+
+.circle-point {
+  position: absolute;
+  top: calc(45%);
+  left: calc(45%);
+
+  width: 10%;
+  height: 10%;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.hour-hand {
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  top: 48%;
+  height: 2%;
+  transform: rotate(90deg);
+}
+
+.hour-hand:after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  width: 35%;
+  height: 100%;
+  background-color: black;
+}
+
+.min-hand {
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  top: 49%;
+  height: 0.5%;
+  transform: rotate(180deg);
+}
+
+.min-hand:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  width: 45%;
+  height: 100%;
+  background-color: red;
+}
+
+.dash {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 49%;
+  height: 0.5%;
+  transform: rotate(var(--dash-rotate));
+}
+
+.dash:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: var(--dash-width);
+  height: 100%;
+  background-color: var(--dash-color);
+}
