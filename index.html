@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-  </head>
 
-  <body onload="renderDash">
-    <div id="app">
-      <div class="clock-body" id="clock-body">
-        <div class="hour-hand">
-          <div></div>
-        </div>
-        <div class="min-hand">
-          <div></div>
-        </div>
-        <div class="circle-point"></div>
-      </div>
+<head>
+  <title>Clock</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="app">
+    <form>
+      <label>
+        Hour
+        <input id="hh" placeholder="00" />
+      </label>
+      <label>
+        Min
+        <input id="mm" placeholder="00" />
+      </label>
+      <button id="btn" type="button">Submit</button>
+    </form>
+    <p id="result">
+      degree: 
+    </p>
+    <div class="clock-body" id="clock">
+      <div class="hour-hand" id="hour-hand"></div>
+      <div class="min-hand" id="min-hand"></div>
+      <div class="circle-point"></div>
     </div>
+    <div></div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
 
-    <script src="src/index.js"></script>
-  </body>
 </html>
